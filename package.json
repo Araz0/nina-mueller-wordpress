@@ -1,0 +1,25 @@
+{
+  "name": "nina-mueller-wordpress",
+  "version": "1.0.0",
+  "description": "The final project of Content Management Systeme by @arazdev and @motcodes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Araz0/nina-mueller-wordpress.git"
+  },
+  "keywords": [
+    "wordpress",
+    "CMS",
+    "YouTuber",
+    "website"
+  ],
+  "author": "@arazdev & @motcodes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Araz0/nina-mueller-wordpress/issues"
+  },
+  "homepage": "https://github.com/Araz0/nina-mueller-wordpress#readme"
+}
