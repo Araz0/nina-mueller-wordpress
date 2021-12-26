@@ -1,0 +1,53 @@
+/* Typography */
+
+/* Body */
+body {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 140%;
+  font-size: var(--body);
+  letter-spacing: 0.5px;
+}
+
+/* Heading */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Butler';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 130%;
+}
+
+/* H1 */
+h1 {
+  font-size: var(--heading-2xl);
+}
+
+/* H2 */
+h2 {
+  font-size: var(--heading-xl);
+}
+
+/* H3 */
+h3 {
+  font-size: var(--heading-lg);
+}
+
+/* H3 */
+h4 {
+  font-size: var(--heading-md);
+}
+
+/* H5 */
+h5 {
+  font-size: var(--heading-sm);
+  font-weight: 500;
+}
+
+.heading-3xl {
+  font-size: var(--heading-3xl);
+}

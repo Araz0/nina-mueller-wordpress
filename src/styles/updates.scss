@@ -1,0 +1,30 @@
+#update {
+  .container__link {
+    color: var(--pink-74);
+    i,
+    i:before,
+    i:after {
+      background-color: var(--pink-74);
+    }
+  }
+
+  .container__posts {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+}
+
+.container__posts {
+  &__item {
+    &__heading {
+      color: var(--pink-74);
+      margin-bottom: 1rem;
+    }
+    &__copy {
+      margin-left: 3rem;
+    }
+  }
+}
