@@ -19,8 +19,10 @@
   --heading-xl: 44px;
   --heading-2xl: 58px;
   --heading-3xl: 68px;
+
+  --min-width: 768px;
 }
-@media (min-width: 768px) {
+@media (min-width: var(--min-width)) {
   :root {
     --body-small: 13px;
     --body: 16px;

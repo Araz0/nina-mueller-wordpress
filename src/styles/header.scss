@@ -1,0 +1,23 @@
+header {
+  width: 100%;
+  background-color: var(--black);
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 28px;
+    margin: 0;
+    list-style: none;
+
+    .middle,
+    .middle svg {
+      width: 3.75rem;
+      height: 3.75rem;
+    }
+    .middle svg {
+      stroke: white;
+    }
+  }
+}
