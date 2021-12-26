@@ -1,0 +1,341 @@
+/*
+Theme Name: nina-mueller
+Theme URI: https://wordpress.org/themes/nina-mueller/
+Author: Araz & Oberholzer
+Author URI: https://wordpress.org/
+Description: This theme is made for an assignment in the fh-salzburg
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Version: 1.3
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: nina-mueller
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.max-container-width {
+  max-width: 1280px;
+  margin: 2em auto;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 150%;
+  margin-bottom: 0.75rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  color: #0e172c;
+}
+
+section {
+  margin-bottom: 2rem;
+  padding: 2rem 1rem;
+}
+
+.section-hero {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  gap: 1em;
+  grid-template-areas: "header" "discription" "icon";
+  justify-items: center;
+}
+.section-hero h2 {
+  grid-area: header;
+}
+.section-hero img {
+  grid-area: icon;
+}
+.section-hero p {
+  grid-area: discription;
+}
+@media (min-width: 768px) {
+  .section-hero {
+    grid-template-columns: 3fr 1fr 3fr;
+    grid-template-areas: "header icon discription";
+  }
+}
+
+.section-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin: 2em auto;
+}
+
+.redirect-arrow {
+  /*https://codepen.io/carlodflores/pen/dgexJw*/
+}
+.redirect-arrow i {
+  display: inline-block;
+  background: #0e172c;
+  height: 2px;
+  width: 30px;
+  margin: 0 auto;
+  position: relative;
+  cursor: pointer;
+  top: -4px;
+}
+.redirect-arrow i:before, .redirect-arrow i:after {
+  content: "";
+  background: #0e172c;
+  position: absolute;
+  height: 2px;
+  width: 7px;
+}
+.redirect-arrow i:before {
+  right: -1px;
+  bottom: -2px;
+  transform: rotate(-45deg);
+}
+.redirect-arrow i:after {
+  right: -1px;
+  top: -2px;
+  transform: rotate(45deg);
+}
+
+header {
+  background-color: #0e172c;
+}
+header img {
+  width: 4em;
+}
+header ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 0.2em 0;
+}
+
+#hero-section {
+  background-color: #fffffe;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  gap: 1em;
+  grid-template-areas: ". img ." ". img ." ". intro .";
+}
+#hero-section img {
+  border-radius: 20em 20em 0 0;
+  width: 20em;
+  max-width: 100%;
+  grid-area: img;
+  box-shadow: -25px 0px 0px 0px #fecddb;
+  -webkit-box-shadow: -25px 0px 0px 0px #fecddb;
+  -moz-box-shadow: -25px 0px 0px 0px #fecddb;
+}
+#hero-section h1 {
+  grid-area: 2/2;
+  position: relative;
+  top: -1em;
+}
+#hero-section p {
+  grid-area: intro;
+  max-width: 30em;
+}
+
+#videos-section {
+  background-color: #fecddb;
+}
+#videos-section img {
+  max-width: 100%;
+}
+#videos-section article {
+  position: relative;
+}
+#videos-section article img {
+  max-width: 100%;
+  height: 225px;
+  width: 400px;
+  object-fit: cover;
+}
+#videos-section article a {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+}
+
+#updates-section article h3 {
+  color: #f683a4;
+}
+#updates-section article p {
+  margin-left: 2em;
+}
+#updates-section .redirect-arrow {
+  color: #f683a4;
+}
+#updates-section .redirect-arrow i {
+  background: #f683a4;
+}
+#updates-section .redirect-arrow i:before, #updates-section .redirect-arrow i:after {
+  background: #f683a4;
+}
+
+footer {
+  padding: 3em 1em 2em 1em;
+  background-color: #0e172c;
+  display: flex;
+  justify-content: center;
+}
+footer .identity img {
+  width: 4em;
+}
+footer .identity p {
+  color: #fffffe;
+}
+
+/*# sourceMappingURL=style.css.map */

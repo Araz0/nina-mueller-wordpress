@@ -1,0 +1,32 @@
+#hero-section {
+  background-color: $color-white;
+
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  gap: 1em;
+  grid-template-areas:
+    ". img ."
+    ". img ."
+    ". intro .";
+
+  img {
+    $img-width: 20em;
+    border-radius: $img-width $img-width 0 0;
+    width: $img-width;
+    max-width: 100%;
+    grid-area: img;
+    box-shadow: -25px 0px 0px 0px $color-pink-light;
+    -webkit-box-shadow: -25px 0px 0px 0px $color-pink-light;
+    -moz-box-shadow: -25px 0px 0px 0px $color-pink-light;
+  }
+  h1{
+    grid-area: 2/2;
+    position: relative;
+    top: -1em;
+  }
+  p{
+    grid-area: intro;
+    max-width: 30em;
+  }
+}

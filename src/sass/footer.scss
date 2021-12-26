@@ -1,0 +1,14 @@
+footer {
+  padding: 3em 1em 2em 1em;
+  background-color: $color-black;
+  display: flex;
+  justify-content: center;
+  .identity {
+    img {
+      width: 4em;
+    }
+    p {
+      color: $color-white;
+    }
+  }
+}
