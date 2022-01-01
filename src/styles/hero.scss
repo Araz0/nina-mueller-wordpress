@@ -9,8 +9,8 @@
   margin: 0 auto;
   z-index: 2;
   &__image__wrapper {
-    --wrapper-width: 256px;
-    --wrapper-height: 400px;
+    --wrapper-width: clamp(16rem, 42vw + 7.6rem, 34.5rem);
+    --wrapper-height: calc(var(--wrapper-width) * 1.5628);
     --wrapper-radius: calc(var(--wrapper-width) / 2);
     border-radius: var(--wrapper-radius) var(--wrapper-radius) 0 0;
     width: var(--wrapper-width);
@@ -19,7 +19,7 @@
     position: relative;
 
     &__item {
-      --image-width: 218px;
+      --image-width: clamp(13.625rem, 35.8vw + 6.5rem, 29.375rem);
       --image-radius: calc(var(--image-width) / 2);
       position: absolute;
       right: 0;
@@ -42,23 +42,80 @@
 
   &__background {
     position: absolute;
+    inset: 0;
     z-index: 1;
-    top: 42%;
-    right: 1%;
 
     svg {
       stroke: var(--pink-90);
+      position: absolute;
+    }
+
+    svg:first-child {
+      top: 42%;
+      right: 1%;
+    }
+
+    svg:last-child {
+      display: none;
     }
   }
-  &__background,
+
   &__background svg {
-    width: 16rem;
-    height: 16rem;
+    --size: clamp(16rem, 9.1vw + 14.2rem, 20rem);
+    width: var(--size);
+    height: var(--size);
   }
 
   &__image__wrapper,
   &__heading,
   &__copy {
     z-index: 3;
+  }
+
+  &__arrow {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    padding: 5rem;
+    max-width: 100%;
+
+    &__image__wrapper {
+      &__item {
+      }
+    }
+
+    &__heading {
+      top: 20%;
+      left: clamp(4rem, 12.5vw - 2rem, 6rem);
+      font-size: var(--heading-3xl);
+    }
+
+    &__copy {
+      position: relative;
+      transform: translateY(-10vw);
+    }
+
+    &__background {
+      svg:first-child {
+        top: 10%;
+        right: 5%;
+      }
+      svg:last-child {
+        --size: clamp(10rem, 9.1vw + 8.2rem, 14rem);
+        height: var(--size);
+        width: var(--size);
+        display: block;
+        bottom: 35%;
+        left: 15%;
+      }
+    }
+
+    &__arrow {
+      display: block;
+      position: absolute;
+      bottom: 12rem;
+      z-index: 4;
+    }
   }
 }

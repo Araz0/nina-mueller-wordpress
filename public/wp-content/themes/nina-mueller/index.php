@@ -4,17 +4,21 @@
     <body>
         <?php wp_body_open();?>
         <?php get_header(); ?>
-        <main class="max-main-width">
-            <section class="hero">
-                <div class="hero__background">
-                    <?php include "logo.php" ?>
-                </div>
-                <div class="hero__image__wrapper">
-                    <img class="hero__image__wrapper__item" src="<?php echo get_template_directory_uri().'/images/hero-image.jpeg' ?>" alt="a mother and her child baking together" width="218" height="395">
-                </div>
-                <h1 class="hero__heading"><span class="first-word">Nina</span><span class="second-word">Müller</span></h1>
-                <p class="hero__copy">I'm baby pug austin lo-fi etsy hella direct trade semiotics neutra listicle fam hexagon irony enamel pin. You probably haven't heard of them gluten-free blue bottle pug 3 wolf moon, salvia tofu hexagon migas edison bulb iceland.</p>
-            </section>
+        <main class="">
+            <div class="max-main-width">
+                <section class="hero">
+                    <div class="hero__background">
+                        <?php include "logo.php" ?>
+                        <?php include "logo.php" ?>
+                    </div>
+                    <div class="hero__image__wrapper">
+                        <img class="hero__image__wrapper__item" src="<?php echo get_template_directory_uri().'/images/hero-image.jpeg' ?>" alt="a mother and her child baking together" width="218" height="395">
+                    </div>
+                    <h1 class="hero__heading"><span class="first-word">Nina</span><span class="second-word">Müller</span></h1>
+                    <p class="hero__copy">I'm baby pug austin lo-fi etsy hella direct trade semiotics neutra listicle fam hexagon irony enamel pin. You probably haven't heard of them gluten-free blue bottle pug 3 wolf moon, salvia tofu hexagon migas edison bulb iceland.</p>
+                    <img class="hero__arrow" src="<?php echo get_template_directory_uri().'/images/arrow-vertical.svg' ?>" alt="a vertical arrow" >
+                </section>
+            </div>
             <section id="video" class="container">
                 <div class="intro">
                     <h2 class="intro__heading"><span class="first-word">Newest</span><span class="second-word">Videos</span></h2>
@@ -25,17 +29,17 @@
                 <div class="container__posts">
                     <div class="container__posts__item">
                         <img class="container__posts__item__image" src="<?php echo get_template_directory_uri().'/images/video-1.jpeg' ?>" alt="image of making cake" width="320" height="180">
-                        <div class="container__posts__item__overlay">
+                        <a class="container__posts__item__overlay" href="#" target="_blank">
                             <img class="container__posts__item__overlay__button" src="<?php echo get_template_directory_uri().'/images/play-button.svg' ?>" alt="video play button" width="32" height="32">
-                            <a class="container__posts__item__overlay__link" href="#" target="_blank"><h4>Baking for Breakfast</h4></a>
-                        </div>
+                            <h4 class="container__posts__item__overlay__link">Baking for Breakfast</h4>
+                        </a>
                     </div>
                     <div class="container__posts__item">
                         <img class="container__posts__item__image" src="<?php echo get_template_directory_uri().'/images/video-2.jpeg' ?>" alt="image of making cake" width="320" height="180">
-                        <div class="container__posts__item__overlay">
+                        <a class="container__posts__item__overlay" href="#" target="_blank">
                             <img class="container__posts__item__overlay__button" src="<?php echo get_template_directory_uri().'/images/play-button.svg' ?>" alt="video play button" width="32" height="32">
                             <a class="container__posts__item__overlay__link" href="#" target="_blank"><h4>How to use Eggs for Breakfast</h4></a>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <a href="#" target="_blank" class="redirect-arrow container__link"><h4>visit the channel</h4><i></i></a>
@@ -63,4 +67,5 @@
         </main>
         <?php include 'footer.php';?>
     </body>
+    <script src="<?php echo get_template_directory_uri().'/js/script.js' ?>"></script>
 </html>

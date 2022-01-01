@@ -15,6 +15,16 @@
     width: 100%;
     margin-bottom: 4rem;
   }
+
+  @media (min-width: 768px) {
+    padding-block: 10rem;
+    .container__posts {
+      margin-block: 6rem;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
 }
 
 .container__posts {
