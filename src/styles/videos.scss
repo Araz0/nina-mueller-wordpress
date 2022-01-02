@@ -13,6 +13,20 @@
       margin-block: 6rem;
       flex-direction: row;
       justify-content: center;
+
+      gap: 6rem;
+
+      &__item,
+      &__item__image {
+        width: 100%;
+        max-width: clamp(20rem, 25vw + 15rem, 31rem);
+      }
+    }
+    .container__link {
+      max-width: 748px;
+      h4 {
+        margin-right: 2rem;
+      }
     }
   }
 }
@@ -51,8 +65,5 @@
         color: var(--white);
       }
     }
-  }
-
-  @media (min-width: 768px) {
   }
 }

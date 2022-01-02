@@ -29,9 +29,9 @@
             <?php include 'logo.php';?>
         </a>
         <ul class="list list__right">
-            <li><a href="#">My Videos</a></li>
-            <li><a href="#">Recipies</a></li>
-            <li><a href="#">Life Updates</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Shop (soon)</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
     </div>
 

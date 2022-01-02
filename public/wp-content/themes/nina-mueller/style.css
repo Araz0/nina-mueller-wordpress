@@ -819,6 +819,17 @@ header .header__desktop.isOpen {
     margin-block: 6rem;
     flex-direction: row;
     justify-content: center;
+    gap: 6rem;
+  }
+  #video .container__posts__item, #video .container__posts__item__image {
+    width: 100%;
+    max-width: clamp(20rem, 25vw + 15rem, 31rem);
+  }
+  #video .container__link {
+    max-width: 748px;
+  }
+  #video .container__link h4 {
+    margin-right: 2rem;
   }
 }
 
@@ -855,6 +866,7 @@ header .header__desktop.isOpen {
   left: 10px;
   color: var(--white);
 }
+
 #update .container__link {
   color: var(--pink-74);
 }
@@ -879,6 +891,16 @@ header .header__desktop.isOpen {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
+    gap: 6rem;
+  }
+  #update .container__posts__item {
+    max-width: clamp(20rem, 13.6vw + 17.3rem, 26rem);
+  }
+  #update .container__link {
+    max-width: 748px;
+  }
+  #update .container__link h4 {
+    margin-right: 2rem;
   }
 }
 
