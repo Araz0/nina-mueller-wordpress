@@ -7,6 +7,28 @@
     width: 100%;
     margin-bottom: 4rem;
   }
+  @media (min-width: 768px) {
+    padding-block: 10rem;
+    .container__posts {
+      margin-block: 6rem;
+      flex-direction: row;
+      justify-content: center;
+
+      gap: 6rem;
+
+      &__item,
+      &__item__image {
+        width: 100%;
+        max-width: clamp(20rem, 25vw + 15rem, 31rem);
+      }
+    }
+    .container__link {
+      max-width: 748px;
+      h4 {
+        margin-right: 2rem;
+      }
+    }
+  }
 }
 
 .container__posts {

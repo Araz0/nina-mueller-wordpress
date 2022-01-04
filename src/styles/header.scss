@@ -1,23 +1,140 @@
 header {
   width: 100%;
   background-color: var(--black);
+  font-family: 'Butler';
+  font-size: clamp(1rem, 2.3vw - 0.1rem, 1.375rem);
+  position: relative;
 
-  .container {
+  .header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     padding: 10px 28px;
     margin: 0;
     list-style: none;
 
-    .middle,
-    .middle svg {
-      width: 3.75rem;
-      height: 3.75rem;
+    a {
+      color: white;
     }
-    .middle svg {
-      stroke: white;
+
+    .nav {
+      justify-content: space-between;
+      z-index: 6;
+      background: var(--black);
+    }
+
+    .nav,
+    .list {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      padding: 0;
+      list-style: none;
+
+      a {
+        display: inline-flex;
+      }
+
+      &__mid,
+      &__mid svg {
+        width: 3.75rem;
+        height: 3.75rem;
+      }
+      &__mid svg {
+        stroke: white;
+      }
+    }
+
+    .nav__left,
+    .nav__right {
+      height: 32px;
+      cursor: pointer;
+    }
+
+    .nav__right {
+      button {
+        display: flex;
+        background: transparent;
+        border: none;
+        padding: 0;
+      }
+    }
+
+    &__desktop {
+      position: absolute;
+      inset: 0;
+      height: calc(100vh - 5rem);
+      transform: translateY(-100%);
+      background: var(--black);
+      z-index: 5;
+
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 4rem;
+      padding-block: 2rem;
+
+      transition: all 0.5s ease-in-out;
+
+      .list__mid {
+        display: none;
+      }
+
+      .list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+
+      &.isOpen {
+        top: 5rem;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .header {
+      height: auto;
+
+      &__mobile {
+        display: none;
+      }
+
+      &__desktop {
+        padding: 18px 48px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: initial;
+
+        position: relative;
+        height: auto;
+        transform: translateY(0);
+        z-index: 5;
+
+        gap: 0;
+
+        .list__mid {
+          display: block;
+        }
+
+        .list {
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center;
+          gap: 0;
+          &__right,
+          &__left {
+            padding: 0;
+            width: 100%;
+          }
+          &__mid {
+            width: auto;
+            padding-inline: clamp(2rem, 12.5vw - 4rem, 4rem);
+          }
+        }
+      }
     }
   }
 }

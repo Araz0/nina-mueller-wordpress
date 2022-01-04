@@ -22,7 +22,7 @@
 
   --min-width: 768px;
 }
-@media (min-width: var(--min-width)) {
+@media (min-width: 768px) {
   :root {
     --body-small: 13px;
     --body: 16px;
@@ -33,6 +33,6 @@
     --heading-lg: 38px;
     --heading-xl: 52px;
     --heading-2xl: 68px;
-    --heading-3xl: 144px;
+    --heading-3xl: clamp(6rem, 7.1vw + 2.6rem, 9rem);
   }
 }
