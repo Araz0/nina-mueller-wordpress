@@ -527,7 +527,7 @@ a {
   margin: 0 auto;
   position: relative;
   cursor: pointer;
-  top: -4px;
+  top: 3px;
 }
 .redirect-arrow i:before, .redirect-arrow i:after {
   content: "";
