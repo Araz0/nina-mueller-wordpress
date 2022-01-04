@@ -4,22 +4,22 @@
     <body>
         <?php wp_body_open();?>
         <?php get_header(); ?>
-        <main class="">
+        <main class="min-main-height">
             <div class="max-main-width">
-            <?php 
-                if (have_posts()) {
-                    while (have_posts()) {
-                        the_post();
-                        echo '<article class="post__container">';
-                        echo '<h2>'.get_the_title().'</h2>';
-                        the_content();
-
-                        echo '</article>';
-                    }
-                }else{
-                    echo "<p>nothing to show here... ~_~</p>";
-                }
-                ?>
+                <section class="container">
+                    <?php 
+                        if (have_posts()) {
+                            while (have_posts()) {
+                                the_post();
+                                echo '<h2>'.get_the_title().'</h2>';
+                                the_content();
+                            }
+                        }else{
+                            echo "<h2>nothing to show here... ~_~</h2>";
+                        }
+                    ?>
+                </section>
+            
             </div>
         </main>
         <?php include 'footer.php';?>

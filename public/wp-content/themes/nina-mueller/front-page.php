@@ -4,7 +4,7 @@
     <body>
         <?php wp_body_open();?>
         <?php get_header(); ?>
-        <main class="">
+        <main class="min-main-height">
             <div class="max-main-width">
                 <section class="hero">
                     <div class="hero__background">

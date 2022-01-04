@@ -481,6 +481,10 @@ a {
   margin: 0 auto;
 }
 
+.min-main-height {
+  min-height: 25em;
+}
+
 .hero {
   padding-block: 1.75rem 4rem;
 }
@@ -917,7 +921,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  padding: 10rem 1rem 5rem;
+  padding: 8rem 1rem 5rem;
   background-color: var(--black);
 }
 footer .container {
