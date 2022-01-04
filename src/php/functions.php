@@ -21,10 +21,18 @@
   function register_my_menus(){
     register_nav_menus(
       array(
-        'main-menu' => 'Main Menu',
+        'main-left' => 'Main Left',
+        'main-right' => 'Main Right',
         'footer-menu' => 'Footer Menu'
       )
     );
   }
   add_action('init','register_my_menus');
+  
+  function get_page_intro_by_path($path) {
+    $post = get_page_by_path($path);
+    $title = apply_filters('the_title', $post->post_title);
+    $content = apply_filters('get_the_content', $post->post_content);
+    return array($title,$content);
+  }
 ?>

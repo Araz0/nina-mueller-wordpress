@@ -19,7 +19,9 @@ Her latest videos should get prominently featured on the front page – of cours
 1. in the `public` folder, the command `wp core download --locale=de_DE` was givin to install a fresh wordpress.
 2. getting into mysql with `mysql -uroot -p` and setting up the database named `db_nina` with the command `create database db_nina;`
 3. install the needed plugins using the wp cli: `wp plugin install [plugin-name-here] --activate`. and we will use it to install Advanced Custom Fields and timber. `wp plugin install advanced-custom-fields --activate` & `wp plugin install timber-library --activate` 
-4. this is not requird for this project, but i decided to add it anyway but not activate it yet. and maybe use it when we dont have free time to do it custom: `wp plugin install contact-form-7`
+4. to avoid an issue with creating new content, a fix was found using the classic editor: `plugin install classic-editor`, more about the issue can be found here: https://wordpress.org/support/topic/publishing-failed-error-message-the-response-is-not-a-valid-json-response-2/
+5. this is not requird for this project, but i decided to add it anyway but not activate it yet. and maybe use it when we dont have free time to do it custom: `wp plugin install contact-form-7`
+
 
 
 ## Technical requirements for this project
