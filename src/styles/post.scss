@@ -1,0 +1,14 @@
+.full-post {
+  &__title {
+    text-align: center;
+  }
+  &__tags {
+    text-align: center;
+  }
+  &__thumbnail {
+    margin: 1em auto 2em auto;
+    width: 100%;
+  }
+  &__content {
+  }
+}
