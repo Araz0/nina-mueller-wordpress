@@ -831,6 +831,7 @@ header .header__desktop.isOpen {
 #video .container__posts {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 3rem;
   width: 100%;
   margin-bottom: 4rem;
@@ -865,6 +866,7 @@ header .header__desktop.isOpen {
 .container__posts__item {
   position: relative;
   max-width: 320px;
+  min-width: 20em;
 }
 .container__posts__item__image {
   max-width: 320px;
