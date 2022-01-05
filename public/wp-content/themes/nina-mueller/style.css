@@ -904,6 +904,7 @@ header .header__desktop.isOpen {
 #update .container__posts {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 6rem;
   width: 100%;
   margin-bottom: 4rem;
@@ -936,6 +937,9 @@ header .header__desktop.isOpen {
 }
 .container__posts__item__copy {
   margin-left: 3rem;
+}
+.container__posts__item__copy a {
+  color: var(--pink-74);
 }
 
 footer {

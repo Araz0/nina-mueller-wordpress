@@ -75,7 +75,7 @@
             <section id="update" class="container">
                 <div class="intro">
                     <?php 
-                        $updates_page = get_page_intro_by_path("updates");
+                        $updates_page = get_page_intro_by_path("blog");
                         $title = explode(" ", $updates_page[0]);
                         $content = $updates_page[1];
                     ?>
@@ -86,14 +86,14 @@
 
                 <div class="container__posts">
                     <?php
-                        $updates_query = new WP_Query('order=DESC&category_name=updates&posts_per_page=2');
+                        $updates_query = new WP_Query('order=DESC&category_name=blog&posts_per_page=2');
                         if ($updates_query->have_posts()):
                         while ($updates_query->have_posts()): $updates_query->the_post();?>
                         <article class="container__posts__item">
                             <a class="container__posts__item__heading" href="<?php the_permalink();?>">
                                 <h3 class="container__posts__item__heading"><?php the_title();?></h3>
                             </a>
-                            <p class="container__posts__item__copy"><?php echo get_the_excerpt(); ?></p>
+                            <p class="container__posts__item__copy"><?php echo get_the_excerpt(); ?> <a href="<?php the_permalink();?>">read more...</a></p>
                         </article>
                         <?php endwhile;?>
                         <?php else: ?>
