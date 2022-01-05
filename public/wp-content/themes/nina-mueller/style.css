@@ -977,5 +977,8 @@ footer .container__name {
   margin: 1em auto 2em auto;
   width: 100%;
 }
+.full-post__content a {
+  color: var(--pink-74);
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -10,5 +10,8 @@
     width: 100%;
   }
   &__content {
+    a {
+      color: var(--pink-74);
+    }
   }
 }
