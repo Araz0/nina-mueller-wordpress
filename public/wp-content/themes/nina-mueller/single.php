@@ -9,7 +9,16 @@
                 <section class="container">
                     <Article class="full-post">
                         <h2 class="full-post__title"><?php echo get_the_title(); ?></h2>
-                        <p class="full-post__tags">Tags: #tag1 #tag2 #tag6</p>
+
+                        
+                        <p class="full-post__tags">Tags:
+                            <?php
+                            $tags = get_tags();
+                            if ( $tags ) :
+                                foreach ( $tags as $tag ) : ?>
+                                    <a href="<?php echo esc_url( get_tag_link( $tag->term_id ) ); ?>" title="<?php echo esc_attr( $tag->name ); ?>"> #<?php echo esc_html( $tag->name ); ?></a>
+                                <?php endforeach; ?>
+                        <?php endif; ?></p>
                         <?php
                             $thumbnail_Link = get_template_directory_uri()."/images/nina-mueller-banner.png";
                             $thumbnaul_alt = "post thumbnail image";
@@ -19,7 +28,7 @@
                             }
                         ?>
                         <img class="full-post__thumbnail" src="<?php echo $thumbnail_Link; ?>" alt="<?php echo $thumbnaul_alt; ?>">
-                        <p class="full-post__content"><?php echo get_the_content(); ?></p>
+                        <?php echo get_the_content(); ?>
                     </Article>
                 </section>
             </div>
