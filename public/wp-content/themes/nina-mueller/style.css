@@ -551,22 +551,36 @@ a {
   transform: rotate(45deg);
 }
 
-h1::-moz-selection,
-h2::-moz-selection,
-h3::-moz-selection,
-h4::-moz-selection,
-h5::-moz-selection,
-a::-moz-selection,
-p::-moz-selection,
-span::-moz-selection,
 h1::selection,
+h1::-moz-selection,
 h2::selection,
+h2::-moz-selection,
 h3::selection,
+h3::-moz-selection,
 h4::selection,
+h4::-moz-selection,
 h5::selection,
+h5::-moz-selection,
+h6::selection,
+h6::-moz-selection,
 a::selection,
+a::-moz-selection,
 p::selection,
-span::selection {
+p::-moz-selection,
+span::selection,
+span::-moz-selection,
+del::selection,
+del::-moz-selection,
+strong::selection,
+strong::-moz-selection,
+em::selection,
+em::-moz-selection,
+pre::selection,
+pre::-moz-selection,
+li::selection,
+li::-moz-selection,
+img::selection,
+img::-moz-selection {
   background-color: var(--pink-74);
   color: var(--black);
 }
@@ -977,8 +991,12 @@ footer .container__name {
   margin: 1em auto 2em auto;
   width: 100%;
 }
-.full-post__content a {
+.full-post a {
   color: var(--pink-74);
+}
+.full-post img.aligncenter {
+  margin: 0px auto;
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */

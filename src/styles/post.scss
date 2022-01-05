@@ -9,9 +9,11 @@
     margin: 1em auto 2em auto;
     width: 100%;
   }
-  &__content {
-    a {
-      color: var(--pink-74);
-    }
+  a {
+    color: var(--pink-74);
+  }
+  img.aligncenter {
+    margin: 0px auto;
+    display: block;
   }
 }
