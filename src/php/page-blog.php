@@ -18,13 +18,23 @@
 
                 <div class="container__posts">
                     <?php
-                        $updates_query = new WP_Query('order=DESC&category_name=updates&posts_per_page=2');
+                        $updates_query = new WP_Query('order=DESC&category_name=blog&posts_per_page=2');
                         if ($updates_query->have_posts()):
                         while ($updates_query->have_posts()): $updates_query->the_post();?>
-                        <article class="container__posts__item">
+                        <article class="container__posts__item--wide">
                             <a class="container__posts__item__heading" href="<?php the_permalink();?>">
                                 <h3 class="container__posts__item__heading"><?php the_title();?></h3>
                             </a>
+                            <?php
+                                $featured_img_url = get_template_directory_uri().'/images/nina-mueller-banner.png';
+                                $featured_img_alt = 'nina mueller banner image';
+                                if (has_post_thumbnail()) {
+                                    /* grab the url for the full size featured image */
+                                    $featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+                                    $featured_img_alt = get_the_post_thumbnail_caption(get_the_ID());
+                                }
+                            ?>
+                            <img class="container__posts__item__thumbnail" src="<?php echo $featured_img_url ?>" alt="<?php echo $featured_img_alt; ?>">
                             <p class="container__posts__item__copy"><?php echo get_the_excerpt(); ?> <a href="<?php the_permalink();?>">read more...</a></p>
                         </article>
                         <?php endwhile;?>

@@ -13,7 +13,14 @@ a {
   color: var(--black);
   text-decoration: none;
 }
-
+p {
+  a {
+    color: var(--pink-74);
+    span {
+      color: var(--pink-74);
+    }
+  }
+}
 .max-main-width {
   max-width: 1280px;
   margin: 0 auto;
