@@ -41,6 +41,7 @@
                 </div>
 
                 <div class="container__posts">
+                    
                     <?php
                         $updates_query = new WP_Query('order=DESC&category_name=videos&posts_per_page=2');
                         if ($updates_query->have_posts()):
@@ -85,22 +86,13 @@
                 </div>
 
                 <div class="container__posts">
-                    <?php
-                        $updates_query = new WP_Query('order=DESC&category_name=blog&posts_per_page=2');
-                        if ($updates_query->have_posts()):
-                        while ($updates_query->have_posts()): $updates_query->the_post();?>
-                        <article class="container__posts__item">
-                            <a class="container__posts__item__heading" href="<?php the_permalink();?>">
-                                <h3 class="container__posts__item__heading"><?php the_title();?></h3>
-                            </a>
-                            <p class="container__posts__item__copy"><?php echo get_the_excerpt(); ?> <a href="<?php the_permalink();?>">read more...</a></p>
-                        </article>
-                        <?php endwhile;?>
-                        <?php else: ?>
-                    <p>Erster Post demnächst...</p>
-                    <?php endif;?>
+                    <?php 
+                        $context = Timber::context();
+                        $args = 'order=DESC&category_name=blog&posts_per_page=2';
+                        $context['posts'] = Timber::get_posts( $args );
 
-                    <?php wp_reset_postdata();?>
+                        Timber::render( 'front-posts.twig', $context );
+                    ?>
                 </div>
                 <a href="/updates" target="_blank" class="redirect-arrow container__link"><h4>see all updates</h4><i></i></a>
             </section>

@@ -28,7 +28,7 @@
     );
   }
   add_action('init','register_my_menus');
-  
+   
   function get_page_intro_by_path($path) {
     $post = get_page_by_path($path);
     $title = apply_filters('the_title', $post->post_title);
@@ -36,18 +36,12 @@
     return array($title,$content);
   }
   function get_yt_video_thumbnail($video_url){
-    //https://www.youtube.com/watch?v=qhUdJTtDVdQ
-    //https://www.youtube.com/watch?v=KGtwol3ve1k&list=RDGMEMWO-g6DgCWEqKlDtKbJA1Gw&start_radio=1&rv=qhUdJTtDVdQ
-    //https://i.ytimg.com/vi/8QKOaTYvYUA/maxresdefault.jpg
     $yt_url = $video_url;
     $yt_params = explode("=", $yt_url);
     $yt_id = explode("&", $yt_params[1]);
     return "https://i.ytimg.com/vi/".$yt_id[0]."/maxresdefault.jpg";
   }
   function get_yt_video_id($video_url){
-    //https://www.youtube.com/watch?v=qhUdJTtDVdQ
-    //https://www.youtube.com/watch?v=KGtwol3ve1k&list=RDGMEMWO-g6DgCWEqKlDtKbJA1Gw&start_radio=1&rv=qhUdJTtDVdQ
-    //https://i.ytimg.com/vi/8QKOaTYvYUA/maxresdefault.jpg
     $yt_url = $video_url;
     $yt_params = explode("=", $yt_url);
     $yt_id = explode("&", $yt_params[1]);
