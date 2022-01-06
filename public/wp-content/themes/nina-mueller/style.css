@@ -1013,5 +1013,9 @@ footer .container__name {
   margin: 0px auto;
   display: block;
 }
+.full-post iframe {
+  width: 63.7vw;
+  height: 35.83125vw;
+}
 
 /*# sourceMappingURL=style.css.map */

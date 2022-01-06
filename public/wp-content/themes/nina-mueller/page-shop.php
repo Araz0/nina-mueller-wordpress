@@ -7,7 +7,7 @@
         <main class="min-main-height">
             <div class="max-main-width">
                 <section class="container">
-                    <h2>This is a custom shop page</h2>
+                    <h2>A great shop is coming soon...</h2>
                 </section>
             </div>
         </main>

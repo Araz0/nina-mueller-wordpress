@@ -33,7 +33,7 @@
                                     $featured_img_alt = get_the_post_thumbnail_caption(get_the_ID());
                                 }
                             ?>
-                            <img class="container__posts__item__image" src="<?php echo $featured_img_url ?>" alt="<?php echo $featured_img_alt; ?>" width="320" height="180">
+                            <img class="container__posts__item__image" src="<?php echo get_yt_video_thumbnail(get_field("yt_url")); ?>" alt="youtube thumbnail image" width="320" height="180">
                             <a class="container__posts__item__overlay" href="<?php the_permalink();?>" target="_blank">
                                 <img class="container__posts__item__overlay__button" src="<?php echo get_template_directory_uri().'/images/play-button.svg' ?>" alt="video play button" width="32" height="32">
                                 <h4 class="container__posts__item__overlay__link"><?php the_title();?></h4>
