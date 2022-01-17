@@ -7,7 +7,7 @@ require 'recipe/common.php';
 set('application', 'wpnina');
 
 // Project repository
-set('repository', 'https://araz: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@github.com/Araz0/nina-mueller-wordpress');
+set('repository', 'https://github.com/Araz0/nina-mueller-wordpress');
 
 // [Optional] Allocate tty for git clone. Default value is false.
 set('git_tty', true); 
