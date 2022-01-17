@@ -33,7 +33,8 @@
     $post = get_page_by_path($path);
     $title = apply_filters('the_title', $post->post_title);
     $content = apply_filters('get_the_content', $post->post_content);
-    return array($title,$content);
+    $permalink = apply_filters('get_permalink', $post->post_permalink);
+    return array($title,$content,$permalink);
   }
   function get_yt_video_thumbnail($video_url){
     $yt_url = $video_url;

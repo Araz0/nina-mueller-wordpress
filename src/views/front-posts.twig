@@ -1,14 +1,15 @@
-{% block content %}
-	{% for post in posts %}
-
-		<article class="container__posts__item">
-			<a class="container__posts__item__heading" href="{{ post.get_permalink }}">
-				<h3 class="container__posts__item__heading">{{ post.title }}</h3>
-			</a>
-			<img class="container__posts__item__thumbnail" src="{{ post.thumbnail.url }}" alt="{{ post.thumbnail.alt }}">
-			<p class="container__posts__item__copy">{{post.post_content|excerpt(30)}}
-				<a href="{{ post.get_permalink }}">read more...</a>
-			</p>
-		</article>
-	{% endfor %}
-{% endblock %}
+<div class="container__posts">
+	{% block content %}
+		{% for post in posts %}
+			<article class="container__posts__item">
+				<a class="container__posts__item__heading" href="{{ post.get_permalink }}">
+					<h3 class="container__posts__item__heading">{{ post.title }}</h3>
+				</a>
+				<img class="container__posts__item__thumbnail" src="{{ post.thumbnail.url }}" alt="{{ post.thumbnail.alt }}">
+				<p class="container__posts__item__copy">{{post.post_content|excerpt(30)}}
+					<a href="{{ post.get_permalink }}">read more...</a>
+				</p>
+			</article>
+		{% endfor %}
+	{% endblock %}
+</div>
