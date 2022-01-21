@@ -1022,4 +1022,20 @@ footer .container__name {
   height: 35.83125vw;
 }
 
+form * {
+  width: 100%;
+  font-family: "Butler";
+  font-size: large;
+  padding-bottom: 0.5em;
+  border-radius: 5px;
+}
+
+input {
+  margin-top: 0.2em;
+}
+
+input[type=submit] {
+  padding: 0.5em;
+}
+
 /*# sourceMappingURL=style.css.map */
