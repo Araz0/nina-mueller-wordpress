@@ -35,6 +35,9 @@ header {
       a {
         display: inline-flex;
       }
+      a:hover{
+        color: var(--pink-90);
+      }
 
       &__mid,
       &__mid svg {
