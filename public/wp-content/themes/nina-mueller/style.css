@@ -628,6 +628,10 @@ header .header .nav a,
 header .header .list a {
   display: inline-flex;
 }
+header .header .nav a:hover,
+header .header .list a:hover {
+  color: var(--pink-90);
+}
 header .header .nav__mid, header .header .nav__mid svg,
 header .header .list__mid,
 header .header .list__mid svg {

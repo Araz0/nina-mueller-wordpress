@@ -7,24 +7,23 @@
         <main class="min-main-height">
             <div class="max-main-width">
             <section id="update" class="container">
-                <div class="intro">
-                    <?php 
-                        $title = explode(" ", get_the_title());
-                    ?>
-                    <h2 class="intro__heading"><span class="first-word"><?php echo $title[0] ?></span><span class="second-word"><?php echo $title[1]?></span></h2>
-                    <p class="intro__copy"><?php echo get_the_content(); ?></p>
-                    <img class="intro__flower" src="<?php echo get_template_directory_uri().'/images/logo-small.svg' ?>" alt="Nina Müller Logo in small" width="40" height="40"> 
-                </div>
-
-                <div class="container__posts">
-                    <?php 
-                        $context = Timber::context();
-                        $args = 'order=DESC&category_name=blog';
-                        $context['posts'] = Timber::get_posts( $args );
-                        
-                        Timber::render( 'blog.twig', $context );
-                    ?>
-                </div>
+                <?php 
+                    $page = 'blog';
+                    $updates_page = get_page_intro_by_path($page);
+                    $title = explode(" ", $updates_page[0]);
+                    $context = Timber::context();
+                    $context['title1'] = $title[0];
+                    $context['title2'] = $title[1];
+                    $context['content'] = $updates_page[1];
+                    Timber::render( 'intro.twig', $context );
+                ?>
+                <?php 
+                    $context = Timber::context();
+                    $args = 'order=DESC&category_name=blog';
+                    $context['posts'] = Timber::get_posts( $args );
+                    
+                    Timber::render( 'blog.twig', $context );
+                ?>
             </section>
             </div>
         </main>
