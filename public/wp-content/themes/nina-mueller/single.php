@@ -30,7 +30,10 @@
                             $yt_vid_id = get_yt_video_id(get_field("yt_url"));
                         ?>
                         <iframe src="https://www.youtube-nocookie.com/embed/<?php echo $yt_vid_id; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <?php echo get_the_content(); ?>
+                        
+                        <div class="full-post__wrapper">
+                            <?php echo get_the_content(); ?>
+                        </div>
                     </Article>
                 </section>
             </div>

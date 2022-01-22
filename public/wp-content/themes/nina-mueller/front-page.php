@@ -24,7 +24,7 @@
                     </div>
                     <?php $title = explode(" ", get_the_title()); ?>
                     <h1 class="hero__heading"><span class="first-word"><?php echo $title[0];?></span><span class="second-word"><?php echo $title[1];?></span></h1>
-                    <p class="hero__copy"><?php echo get_the_content(); ?></p>
+                    <p class="hero__copy"><?php echo wp_strip_all_tags( get_the_content() ); ?></p>
                     <img class="hero__arrow" src="<?php echo get_template_directory_uri().'/images/arrow-vertical.svg' ?>" alt="a vertical arrow" >
                 </section>
             </div>

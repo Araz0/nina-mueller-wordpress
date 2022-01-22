@@ -6,7 +6,7 @@
         <?php get_header(); ?>
         <main class="min-main-height">
             <div class="max-main-width">
-            <section id="video" class="container">
+            <section id="video" class="container page">
                 <?php 
                     $page = 'videos';
                     $updates_page = get_page_intro_by_path($page);
