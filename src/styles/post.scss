@@ -4,10 +4,25 @@
   }
   &__tags {
     text-align: center;
+    margin-block: 1.5rem;
   }
   &__thumbnail {
     margin: 1em auto 2em auto;
     width: 100%;
+  }
+  &__wrapper {
+    max-width: 720px;
+    margin: 4rem auto 0px auto;
+    img {
+      margin-block: 2rem;
+    }
+    h2,
+    h3,
+    h4,
+    h5,
+    p {
+      margin-bottom: 1rem;
+    }
   }
   a {
     color: var(--pink-74);
@@ -16,8 +31,8 @@
     margin: 0px auto;
     display: block;
   }
-  iframe{
+  iframe {
     width: 63.7vw;
-    height: calc(63.7vw * calc(9/16));
+    height: calc(63.7vw * calc(9 / 16));
   }
 }

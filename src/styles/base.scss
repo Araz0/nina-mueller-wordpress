@@ -128,3 +128,8 @@ img::-moz-selection {
   background-color: var(--pink-74);
   color: var(--black);
 }
+
+.wrapper-max-width {
+  max-width: 720px;
+  margin: 4rem auto 0px;
+}
